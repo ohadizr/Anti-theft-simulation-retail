@@ -1,0 +1,79 @@
+{
+  "bottles": [
+    {
+      "key": "1",
+      "name": "Coca Cola",
+      "price": 10,
+      "image": "../.././data/images/Cocacola.png"
+    },
+    {
+      "key": "2",
+      "name": "Pepsi",
+      "price": 10,
+      "image": "../.././data/images/Pepsi.png"
+    },
+    {
+      "key": "3",
+      "name": "Fanta",
+      "price": 10,
+      "image": "../.././data/images/Fanta.png"
+    },
+    {
+      "key": "4",
+      "name": "Sprite",
+      "price": 10,
+      "image": "../.././data/images/Sprite.png"
+    }
+  ],
+  "vegetables": [
+    {
+      "key": "11",
+      "name": "onion",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key": "22",
+      "name": "tomato",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key": "33",
+      "name": "potato",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key": "44",
+      "name": "cabbage",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key": "55",
+      "name": "carrot",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key": "66",
+      "name": "cucumber",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    },
+    {
+      "key":"77",
+      "name":"garlic",
+      "price":10,
+      "image":"../.././data/images/onion.png"
+    },
+    {
+      "key": "88",
+      "name": "ginger",
+      "price": 10,
+      "image": "../.././data/images/onion.png"
+    }
+  ]
+
+}

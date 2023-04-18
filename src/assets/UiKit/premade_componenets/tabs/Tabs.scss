@@ -1,0 +1,35 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tab-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-button {
+
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .tab-button.active {
+    color: #fff;
+  }
+  
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+  

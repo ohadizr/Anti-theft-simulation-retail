@@ -1,0 +1,133 @@
+.store_layout {
+    position: relative;
+    height: 60vh;
+    width: 80vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .store_layout_background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .soft_drinks {
+    position: absolute;
+    top: 17.5vh;
+    left: 74%;
+    transform: translateX(-25%);
+    height: 8%;
+    width: 1.5vw;
+    background-color: rgba(26, 157, 83, 0.192);
+    z-index: 5;
+    border: none;
+  }
+  
+  .soft_drinks:hover {
+    background-color: rgba(26, 157, 83, 0.5);
+    cursor: pointer;
+  }
+  
+  .natural_drinks {
+    position: absolute;
+    top: 22.3vh;
+    left: 74%;
+    transform: translateX(-25%);
+    height: 8%;
+    width: 1.5vw;
+    background-color: rgba(117, 76, 33, 0.192);
+    z-index: 5;
+    border: none;
+  }
+  
+  .natural_drinks:hover {
+    background-color: rgba(117, 76, 33, 0.5);
+    cursor: pointer;
+  }
+  
+  .beers {
+    position: absolute;
+    top: 45.2%;
+    left: 74%;
+    transform: translateX(-25%);
+    height: 8%;
+    width: 1.5vw;
+    background-color: rgba(39, 26, 157, 0.192);
+    z-index: 5;
+    border: none;
+  }
+  
+  .beers:hover {
+    background-color: rgba(39, 26, 157, 0.5);
+    cursor: pointer;
+  }
+  .vegetables{
+    position: absolute;
+    top: 48.2%;
+    left: 40%;
+    transform: translateX(-25%);
+    height: 4%;
+    width: 4vw;
+    background-color: rgba(25, 127, 42, 0.192);
+    z-index: 5;
+    border: none;
+  }
+  .vegetables:hover {
+    background-color: rgba(25, 127, 42, 0.5);
+    cursor: pointer;
+  }
+  .mask_container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(239, 70, 231, 0.099);
+    z-index: 2;
+  }
+  
+
+.cart {
+    position: absolute;
+    top: 45.2%;
+    left: 16%;
+    transform: translateX(-25%);
+    height: 3%;
+    width: 1.5vw;
+    background-color: rgba(39, 26, 157, 0.192);
+    z-index: 5;
+    border: none;
+    transform-origin: 50% 3.5vw;
+    background-color: #1a1517a9;
+    border: 0.25vw solid #c21a1ac8;
+    border-left: 0.5vw solid #fff;
+    border-right: 0.2vw solid black;
+    animation: drive 3s linear infinite;
+  }
+
+  
+  @keyframes drive {
+    0% { transform: translate(-5vw, 0) rotate(0);
+        animation-duration: 3s;  }
+     20% { transform: translate(0, 0) rotate(0);
+         animation-duration: 10s; }; 
+
+    /* 30% { transform: translate(+20%, 0) rotate(-90deg); 
+        animation-duration: 5s; }
+    50% { transform: translate(0,9vh) rotate(-90deg);
+        animation-duration: 5s; }
+    60% { transform: translate(0,9vh) rotate(-90deg);
+        animation-duration: 5s; } */
+    /* 45% { transform: translate(39.875vw, 38.125vw) rotate(180deg); } */
+    /* 56% { transform: translate(1.875vw, 38.125vw) rotate(180deg); } */
+    /* 57% { transform: translate(1.875vw, 38.125vw) rotate(180deg); } */
+    /* 63% { transform: translate(1.875vw, 38.125vw) rotate(180deg); } */
+    /* 66% { transform: translate(0vw, 38.125vw) rotate(270deg); } */
+    /* 97% { transform: translate(0vw, 0) rotate(270deg); } */
+    /* 100% { transform: translate(0vw, 0) rotate(360deg); } */
+  }
+  

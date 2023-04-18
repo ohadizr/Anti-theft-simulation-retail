@@ -1,0 +1,28 @@
+.offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1050;
+    // display: none;
+    overflow-y: auto;
+    outline: 0;
+    transition: transform 0.3s ease-out;
+    &.show {
+      display: block;
+      transform: translateX(0);
+    }
+    &.offcanvas-end {
+      transform: translateX(100%);
+    }
+  }
+  
+  .offcanvas-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  

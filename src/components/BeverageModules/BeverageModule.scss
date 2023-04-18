@@ -1,0 +1,63 @@
+.beverageModuleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  .beverage_layout_background {
+    position: absolute;
+    width: auto;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .productLine {
+    left: 0;
+    top: 35px;
+    width: 80%;
+    padding: 0 10%;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1px;
+
+    .productDisplay {
+      display: flex;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      z-index: 1;
+      justify-content: center;
+      .bottlesImg {
+        width: 50%;
+        height: 5rem;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .productName {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: none;
+      }
+      .productPrice {
+        font-size: 1.2rem;
+        font-weight: 400;
+        display: none;
+      }
+    }
+  }
+  .bottleRowTwo{top: 135px;}
+  .bottleRowThree{top: 235px;}
+  .bottleRowFour{top: 335px;}
+}

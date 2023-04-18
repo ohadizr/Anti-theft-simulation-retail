@@ -1,0 +1,31 @@
+.card {
+    // width: 18rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgba(139, 174, 130, 0.5);;
+    transition: transform 0.2s ease-in-out;
+    padding: 1rem;
+    border:rgba(0, 0, 0, 0.1) solid 0.3rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    .card-image {
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+      .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+      .card-description {
+        font-size: 1rem;
+        color: gray;
+      }
+    }
+  }
+  

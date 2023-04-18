@@ -1,0 +1,44 @@
+.Line {
+    display: flex;
+    flex-direction: column;
+
+.middle {
+    vertical-align: middle;
+}
+
+.between {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+.center { 
+    align-items: center;
+}
+}
+
+
+.rows{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100%;
+    .around{
+        justify-content: space-around;
+    }
+    .between{
+        justify-content: space-between;
+        
+    }
+    .middle{
+        align-items: center;
+    }
+}

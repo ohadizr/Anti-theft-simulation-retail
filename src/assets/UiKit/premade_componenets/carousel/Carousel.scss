@@ -1,0 +1,42 @@
+.carousel {
+
+    position: relative;
+    width: 100%;
+    // height: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .carousel-inner {
+
+      width: 100%;
+
+      transition: transform 5.5s ;
+
+    }
+  
+    .carousel-prev,
+    .carousel-next {
+      width: auto;
+      position: relative;
+      // top: 50%;
+      // transform: translateY(-50%);
+      z-index: 1;
+      font-size: 2rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+    }
+  
+    .carousel-prev {
+      // left: 1rem;
+    }
+  
+    .carousel-next {
+      // right: 1rem;
+    }
+  }
+  
