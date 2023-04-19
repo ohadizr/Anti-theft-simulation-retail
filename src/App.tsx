@@ -6,9 +6,9 @@ function App() {
   
   return (
     <div className="mainContainer">
-      {/* <StoreLayOut 
-      /> */}
-      <CartRoutes />
+      <StoreLayOut 
+      />
+      {/* <CartRoutes /> */}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import './StoreLayOut.css'
 import BeverageModule from './BeverageModules/BeverageModule'
 import VegetableMoudle from './VegtableMoudules/VegtableMoudle'
 import CartRoutes from './cart/CartRoutes'
+import CartRoutesAuto from './cart/CartRoutesAuto'
 import CenteredModal from '../assets/UiKit/premade_componenets/Modals/VerticalModal'
 import product from '.././data/products.json'
 
@@ -37,6 +38,7 @@ export default function StoreLayOut() {
 
     {/* walkable space  */}
     {/* <CartRoutes /> */}
+    <CartRoutesAuto />
     {/* <button className='cart'/> */}
    
    {isModelOpen?
