@@ -4,19 +4,15 @@ import Customer from "./Customers/Customer";
 import Boundary from "./Map/Boundary";
 import CartPickup from "./Map/CartPickup";
 import Cameras from "./Map/Cameras";
-import layoutMap from "./Map/layoutMap.json";
 import routes from "./Map/routes.json";
+import { useGlobalState } from "../../GlobalContext";
 
-type recordingArray = {
-  direction: string;
-  time: number;
-  y: number;
-  x: number;
-};
 
 interface RoutesProps {}
 
 const CartRoutesAuto: React.FC<RoutesProps> = () => {
+  const {camerasControlState} = useGlobalState();
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const boundaries = useMemo(() => {
     const boundaries: Boundary[] = [];
@@ -90,7 +86,7 @@ const customer5 =useMemo(() => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas!.getContext("2d");
-    let custumerArr= [customer
+    let customerArr= [customer
       ,customer2,customer3,customer4,customer5
     ]
     canvas!.height = 470;
@@ -108,7 +104,7 @@ const customer5 =useMemo(() => {
       requestAnimationFrame(animate);
       ctx!.clearRect(0, 0, canvas!.width, canvas!.height);
     
-      custumerArr.forEach(c => {
+      customerArr.forEach(c => {
       boundaries.forEach((boundary) => {
         boundary.draw(ctx);
         if (
@@ -193,29 +189,16 @@ function moveCustomer(steps: any[], index: number, c: Customer) {
   }
 }
 
-//turn routes into array 
 
 
 const stepsArr = Object.entries(routes);
-const customerArray = [customer
-  ,customer2,customer3,customer4,customer5
-]
-//loop through array and call moveCustomer function
+
 
   moveCustomer(stepsArr[0][1][0], 0, customer2);
   moveCustomer(stepsArr[0][1][1], 0, customer3);
   moveCustomer(stepsArr[0][1][2], 0, customer4);
   moveCustomer(stepsArr[0][1][3], 0, customer5);
   moveCustomer(stepsArr[0][1][4], 0, customer);
-
-  // setTimeout(() => {
-
-  // }, 15000);
-
-    
-
-
-
 
   const map = [
     ["-", "-", "-", "-", "-","-", "-", "-", "-", "-","-", "-", "-", "-", "-","-", "-", "-", "-", "-","-", "-", "-", "-", "-","-", "-", "-", "-", "-", ],
@@ -228,7 +211,7 @@ const customerArray = [customer
     ["-", "-", "-", " ", " ", " ", "","", " ", " ", " ", " ", " "," ", " ", " ", " ", " ", " "," ", " ", "-","-", "-", "-", "-", "-", "-", "-", "-",],
     ["-", "-", "-", " ", " ", " ", " "," ", " ", " ", " ", "-", "-","-", "-", " ", " ", "-", "-","-", " ", "-","-", "-", "-", "-", "-", "-", "-", "-",],
     ["-", "-", "-", " ", " ", " ", " "," ", " ", " ", " ", " ", " "," ", " ", " ", " ", " ", " "," ", " ", "-","-", "-", "-", "-", "-", "-", "-", "-",],
-    ["-", "-", "-", " ", " ", "+", "-","-", "-", "-", " ", " ", " "," ", " ", " ", "x", "x", "x","x", " ", "-","-", "-", "-", "-", "-", "-", "-", "-",],
+    ["-", "-", "-", " ", " ", "+", "-","-", "-", "-", " ", " ", " "," ", " ", " ", "x", " ", " "," ", " ", "-","-", "-", "-", "-", "-", "-", "-", "-",],
     ["-", "-", "-", " ", " ", "+", "-","-", "-", "-", " ", "-", "-","-", "-", " ", "x", "-", "-","-", " ", "-", "-", "-", "-","-", "-", "-", "-", "-",],
     ["-", "-", "-", " ", " ", "+", "-","-", "-", "-", " ", "-", "-","-", "-", " ", "x", "-", "-","-", " ", "-", "-", "-", "-","-", "-", "-", "-", "-",],
     ["-", "-", "-", " ", " ", "", " "," ", " ", " ", " ", " ", " "," ", " ", " ", "x", "-", "-","-", " ", " ", " ", " ", " ","-", "-", "-", "-", "-",],
@@ -265,12 +248,17 @@ const customerArray = [customer
           break;
       
         case "x" :
+          if (camerasControlState === false) {
+            break;
+            
+          } else {
           cameras.push(
             new Cameras({
               x: Cameras.width * j,
               y: Cameras.height * i,
             })
           );
+          }
           break;
       }
     });

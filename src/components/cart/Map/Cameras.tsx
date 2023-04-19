@@ -1,3 +1,5 @@
+
+
 type Position = {
     x: number;
     y: number;
@@ -6,6 +8,7 @@ type Position = {
   console.log("CartPickup.tsx");
   
 export default class Cameras {
+  
     constructor(
       public position: Position,
       public width: number = 20,
@@ -21,22 +24,12 @@ export default class Cameras {
     static height = 20;
 
     draw = (ctx: CanvasRenderingContext2D | null) => {
-      //count true time for this.alert
 
-  //     let time = new Date();
-  //     let timeAlert:null|number = null
-  //  setTimeout(() => {
-  //   let timeNow = time.getTime();
-  //   let timeAlert = timeNow - time.getTime();
-  //      }, 10000);
 
       if(this.alert){
         ctx!.fillStyle = "rgba(223, 223, 69, 0.663)";
-        // if (this.alert && timeAlert ) {
-        //   ctx!.fillStyle = "rgba(223, 164, 69, 0.663)";
-        // }
       }else{
-        ctx!.fillStyle = "rgba(238, 238, 192, 0.514)";
+        ctx!.fillStyle = "transparent";
       }
 
       ctx!.fillRect(
