@@ -13,7 +13,7 @@ type GlobalState = {
 const GlobalContext = createContext<GlobalState | undefined>(undefined);
 
 function GlobalContextProvider(props: GlobalContextProviderProps) {
-  const [customerControlState, setCustomerControlState] = React.useState(false);
+  const [customerControlState, setCustomerControlState] = React.useState(true);
   const [camerasControlState, setCamerasControlState] = React.useState(false);
   useEffect(() => {
   }, [customerControlState]);
